@@ -19,8 +19,20 @@ print(timestamp) """
 
 
 # Pip modules
+
 # in cmd type pip install moduleName for installing
 # in cmd type pip freeze for showing global modules
 
-import camelcase
-print(camelcase.CamelCase().hump('hello there world'))
+""" import camelcase
+print(camelcase.CamelCase().hump('hello there world')) """
+
+# Import custom module
+import validator
+from validator import validate_email
+
+email = 'test@test.com'
+
+if(validate_email(email)):
+  print('Email is valid')
+else:
+  print('Email in bad')
