@@ -27,11 +27,11 @@ print(brad.greeting())
 
 class Customer(User):
   # Constructor
-  def __init__(self, name, email, age):
-    self.name = name
-    self.email = email
-    self.age= age
-    self.balance = 0
+  # def __init__(self, name, email, age):
+  #   self.name = name
+  #   self.email = email
+  #   self.age= age
+  #   self.balance = 0
   
   def set_balance(self, balance):
     self.balance = balance
@@ -44,3 +44,16 @@ janet = Customer('Janet Johnson','janet@gmail.com',25)
 janet.set_balance(500)
 
 print(janet.greeting())
+
+# Use parent and super 
+
+class Client(User):
+  def __init__(self, name, email, age,billAmount):
+      super().__init__(name, email, age)
+      self.billAmount = billAmount
+      print(f'my bill amount is {billAmount}')
+      
+
+
+tom = Client('tomy','tomy@gmail.com',40,201)
+print(tom.greeting())
