@@ -16,4 +16,4 @@ print(user['first_name']) """
 car = {'make':'Ford','model':'Mustang','year':1970}
 
 carJSON = json.dumps(car)
-print(carJSON)
+""" print(carJSON) """
